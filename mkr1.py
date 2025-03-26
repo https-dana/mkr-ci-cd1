@@ -17,3 +17,11 @@ def count_words(text):
     word_delimiters = re.compile(r'[,\\s;:-]+')
     words = word_delimiters.split(text)
     return sum(1 for w in words if w.strip())
+
+if __name__ == "__main__":
+    file_path = "sample.txt" 
+    text = read_file(file_path)
+    words = count_words(text)
+    sentences = count_sentences(text)
+    print(f"Words: {words}, Sentences: {sentences}")
+
